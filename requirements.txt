@@ -1,0 +1,21 @@
+# local package
+-e .
+
+# external requirements
+python-dotenv>=0.5.1
+
+#
+# Data processing
+#
+
+pandas
+
+#
+# Data access
+#
+
+# see https://fingertips-py.readthedocs.io/en/latest/
+fingertips_py
+
+# statxplorer @ https://github.com/philipbrien/statxplorer/zipball/master
+
