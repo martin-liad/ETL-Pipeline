@@ -6,7 +6,7 @@ from jobs import JobEnv
 
 import fingertips_py as ftp
 
-class FingertipsYouthOfferIndicators:
+class FingertipsYouthOfferJob:
     """
     Extracts indicators from NHS Fingertips that relate to the 
     Lewisham Youth Offer.

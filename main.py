@@ -2,7 +2,7 @@ from pathlib import Path
 import sys
 
 from jobs import GlobalEnv, JobEnv
-from jobs.fingertips import FingertipsYouthOfferIndicators
+from jobs.fingertips import FingertipsYouthOfferJob
 
 def main() -> int:
     """
@@ -23,7 +23,7 @@ def main() -> int:
         source_name="nhs_fingertips", 
         collection_name="youth_offer",
     )
-    FingertipsYouthOfferIndicators().run(job_env)
+    FingertipsYouthOfferJob().run(job_env)
 
     # All done    
     return 0

@@ -15,7 +15,7 @@ class GlobalEnv(object):
 
 class JobEnv(object):
     """
-    Parent class for ETL jobs.
+    Holds configuration variables for ETL jobs.
     """
 
     def __init__(self, global_env: GlobalEnv, source_name: str, collection_name: str):
