@@ -23,7 +23,12 @@ def main() -> int:
         source_name="nhs_fingertips", 
         collection_name="youth_offer",
     )
-    FingertipsYouthOfferJob().run(job_env)
+    FingertipsYouthOfferJob().run(job_env, 
+        indicator_names = [
+            'Admissions for asthma (0 to 9 years)',
+            'Admissions for diabetes (0 to 9 years)',
+            'Admissions for epilepsy (0 to 9 years)',
+        ])
 
     # All done    
     return 0

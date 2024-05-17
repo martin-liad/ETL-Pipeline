@@ -11,14 +11,18 @@ class FingertipsYouthOfferJob:
     Extracts indicators from NHS Fingertips that relate to the 
     Lewisham Youth Offer.
     """
-
-    def run(self, job_env: JobEnv):
+    
+    def run(self, job_env: JobEnv, indicator_names: list[str]):
+        """
+        Fetch NHS Fingertips data.
         
-        indicator_names = [
-            'Admissions for asthma (0 to 9 years)',
-            'Admissions for diabetes (0 to 9 years)',
-            'Admissions for epilepsy (0 to 9 years)',
-        ]
+        :param job_env: a JobEnv instance
+        :param indicator_names: a list of Fingertips indicator names to extract
+        :raises ValueError: if indicator_names is empty
+        """
+
+        if len(indicator_names)==0:
+          raise ValueError("Need to specify a list of indicators")
 
         # Select sources for all desired indicators
         print("Fetching Fingertips metadata...")
